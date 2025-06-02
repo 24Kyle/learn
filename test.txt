@@ -1,0 +1,55 @@
+-- Buat database dan pilih database-nya
+CREATE DATABASE IF NOT EXISTS kantin;
+USE kantin;
+
+-- --------------------------------------------------------
+-- Tabel: menu
+-- --------------------------------------------------------
+CREATE TABLE IF NOT EXISTS `menu` (
+  `id` INT(11) NOT NULL AUTO_INCREMENT,
+  `nama` VARCHAR(100) NOT NULL,
+  `harga` INT(11) NOT NULL,
+  `stok` INT(11) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+INSERT INTO `menu` (`id`, `nama`, `harga`, `stok`) VALUES
+(1, 'Indomie', 7000, 200),
+(2, 'Batagor', 10000, 80),
+(3, 'Es Teh', 5000, 5),
+(4, 'Mineral', 3000, 10);
+
+-- --------------------------------------------------------
+-- Tabel: pesan
+-- --------------------------------------------------------
+CREATE TABLE IF NOT EXISTS `pesan` (
+  `id` INT(11) NOT NULL AUTO_INCREMENT,
+  `nama` VARCHAR(100) NOT NULL,
+  `email` VARCHAR(100) NOT NULL,
+  `pesan` TEXT NOT NULL,
+  `tanggal` TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+INSERT INTO `pesan` (`id`, `nama`, `email`, `pesan`, `tanggal`) VALUES
+(1, 'keren', 'bagasdwipermana10@gmail.com', 'asda', '2025-06-01 16:28:43');
+
+-- --------------------------------------------------------
+-- Tabel: transaksi
+-- --------------------------------------------------------
+CREATE TABLE IF NOT EXISTS `transaksi` (
+  `id` INT(11) NOT NULL AUTO_INCREMENT,
+  `menu_id` INT(11) NOT NULL,
+  `quantity` INT(11) NOT NULL,
+  `total_harga` INT(11) NOT NULL,
+  `tanggal` TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  PRIMARY KEY (`id`),
+  KEY `menu_id` (`menu_id`),
+  CONSTRAINT `transaksi_ibfk_1` FOREIGN KEY (`menu_id`) REFERENCES `menu` (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+INSERT INTO `transaksi` (`id`, `menu_id`, `quantity`, `total_harga`, `tanggal`) VALUES
+(1, 1, 10, 70000, '2025-06-01 16:27:47'),
+(2, 2, 9, 90000, '2025-06-01 16:28:33'),
+(3, 3, 5, 25000, '2025-06-01 17:12:39'),
+(4, 2, 20, 200000, '2025-06-01 19:50:11');

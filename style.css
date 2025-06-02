@@ -1,0 +1,410 @@
+/* Reset basic styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  background: #f5f8fa;
+  color: #333;
+  line-height: 1.6;
+  font-size: 16px;
+}
+
+/* Header */
+header {
+  background-color: #005f73;
+  color: #fff;
+  padding: 20px 40px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 15px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+header h1 {
+  font-size: 2rem;
+  letter-spacing: 2px;
+  font-weight: 700;
+}
+
+header nav a {
+  color: #fff;
+  text-decoration: none;
+  margin-left: 25px;
+  font-weight: 600;
+  font-size: 1rem;
+  transition: color 0.3s ease;
+}
+
+header nav a:hover {
+  color: #94d2bd;
+}
+
+/* Sections */
+section {
+  max-width: 1100px;
+  margin: 40px auto;
+  padding: 0 20px;
+}
+
+/* About Section */
+#about {
+  text-align: center;
+}
+
+#about h2 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  color: #0a9396;
+  font-weight: 700;
+}
+
+#about img {
+  width: 200px;
+  border-radius: 12px;
+  margin-bottom: 20px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#about video {
+  display: block;
+  margin: 0 auto 25px auto;
+  max-width: 600px;
+  width: 100%;
+  border-radius: 12px;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.2);
+}
+
+#about p {
+  font-size: 1.125rem;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+  color: #333;
+  font-weight: 500;
+}
+
+/* Cafetaria List Section */
+#cafetaria {
+  background: #e0fbfc;
+  padding: 30px 20px;
+  border-radius: 16px;
+  box-shadow: 0 0 15px rgba(0,159,183,0.15);
+}
+
+#cafetaria h2 {
+  text-align: center;
+  font-size: 2.25rem;
+  margin-bottom: 30px;
+  color: #005f73;
+  font-weight: 700;
+}
+
+.kantin {
+  display: flex;
+  align-items: flex-start;
+  gap: 25px;
+  margin-bottom: 40px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.kantin h3 {
+  width: 100%;
+  font-size: 1.8rem;
+  margin-bottom: 15px;
+  color: #0a9396;
+  font-weight: 700;
+  text-align: center;
+}
+
+.kantin img {
+  max-width: 280px;
+  width: 100%;
+  height: auto;
+  border-radius: 16px;
+  box-shadow: 0 6px 20px rgba(0,159,183,0.25);
+  object-fit: cover;
+}
+
+.menu-item {
+  background: white;
+  border-radius: 14px;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+  padding: 18px 20px;
+  flex: 1 1 220px;
+  max-width: 260px;
+  margin: 10px;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  transition: transform 0.3s ease;
+  cursor: default;
+}
+
+.menu-item:hover {
+  transform: scale(1.05);
+}
+
+.menu-item img {
+  width: 90px;
+  height: 90px;
+  border-radius: 14px;
+  object-fit: cover;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.12);
+}
+
+.menu-item:first-child {
+  font-weight: 600;
+  font-size: 1.1rem;
+  color: #005f73;
+}
+
+#buy {
+  background: #fff;
+  border-radius: 16px;
+  padding: 30px 25px 40px 25px;
+  box-shadow: 0 0 20px rgba(0,0,0,0.07);
+}
+
+#buy h2 {
+  text-align: center;
+  font-size: 2.25rem;
+  margin-bottom: 30px;
+  color: #007f5f;
+  font-weight: 700;
+}
+
+.menu-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+.menu-item {
+  width: 100%;
+  max-width: 700px;
+  background: #e7f6f2;
+  padding: 15px 20px;
+  border-radius: 14px;
+  box-shadow: inset 0 0 6px #c1e7dd;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  position: relative;
+}
+
+.menu-item img {
+  width: 100px;
+  height: 100px;
+  border-radius: 14px;
+  object-fit: cover;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.menu-info {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.menu-info .name {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #005f73;
+}
+
+.menu-info .price {
+  color: #007f5f;
+  font-weight: 600;
+}
+
+.menu-action {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+}
+
+.menu-action input[type="checkbox"] {
+  width: 20px;
+  height: 20px;
+  accent-color: #0a9396;
+}
+
+.menu-action input[type="number"] {
+  width: 60px;
+  height: 35px;
+  font-size: 1.1rem;
+  border-radius: 8px;
+  border: 2px solid #94d2bd;
+  text-align: center;
+  outline: none;
+  transition: border-color 0.3s ease;
+}
+
+.menu-action input[type="number"]:focus:not(:disabled) {
+  border-color: #0a9396;
+  box-shadow: 0 0 5px #0a9396;
+}
+
+.menu-action input[type="number"]:disabled {
+  background-color: #d4e8e2;
+  cursor: not-allowed;
+}
+
+/* Total dan tombol */
+#buy p strong {
+  display: block;
+  text-align: center;
+  font-size: 1.5rem;
+  color: #007f5f;
+  margin-top: 25px;
+  font-weight: 800;
+}
+
+#buy button {
+  display: block;
+  margin: 25px auto 0 auto;
+  background: #0a9396;
+  color: white;
+  border: none;
+  padding: 14px 40px;
+  font-size: 1.25rem;
+  border-radius: 30px;
+  cursor: pointer;
+  font-weight: 700;
+  box-shadow: 0 6px 14px rgba(10,147,150,0.7);
+  transition: background-color 0.3s ease;
+}
+
+#buy button:hover {
+  background: #005f73;
+}
+
+/* QR Code container */
+#qr {
+  max-width: 280px;
+  margin: 25px auto 0 auto;
+  text-align: center;
+  font-weight: 700;
+  color: #0a9396;
+}
+
+/* Contact Section */
+#contact {
+  max-width: 600px;
+  margin: 40px auto 80px auto;
+  background: #e7f6f2;
+  border-radius: 16px;
+  padding: 30px 25px;
+  box-shadow: 0 0 15px rgba(0,159,183,0.2);
+}
+
+#contact h2 {
+  font-size: 2.1rem;
+  color: #007f5f;
+  font-weight: 700;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+#contact form {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+#contact input[type="text"],
+#contact input[type="email"],
+#contact textarea {
+  padding: 12px 18px;
+  font-size: 1.1rem;
+  border: 2px solid #94d2bd;
+  border-radius: 14px;
+  outline: none;
+  transition: border-color 0.3s ease;
+  resize: vertical;
+}
+
+#contact input[type="text"]:focus,
+#contact input[type="email"]:focus,
+#contact textarea:focus {
+  border-color: #0a9396;
+  box-shadow: 0 0 8px #0a9396;
+}
+
+#contact button {
+  background: #0a9396;
+  border: none;
+  color: white;
+  font-weight: 700;
+  padding: 14px;
+  border-radius: 30px;
+  font-size: 1.2rem;
+  cursor: pointer;
+  box-shadow: 0 6px 14px rgba(10,147,150,0.7);
+  transition: background-color 0.3s ease;
+}
+
+#contact button:hover {
+  background: #005f73;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 22px 10px;
+  background-color: #005f73;
+  color: white;
+  font-weight: 600;
+  letter-spacing: 1px;
+  box-shadow: inset 0 1px 4px rgba(0,0,0,0.3);
+  margin-top: 80px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 960px) {
+  header {
+    justify-content: center;
+  }
+
+  header nav a {
+    margin-left: 15px;
+    font-size: 0.95rem;
+  }
+
+  .menu-container,
+  .kantin {
+    justify-content: center;
+  }
+}
+
+@media (max-width: 600px) {
+  .menu-item label {
+    min-width: auto;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .menu-item img {
+    width: 90%;
+    height: auto;
+    margin-bottom: 12px;
+  }
+
+  .menu-item > input.qty-input {
+    margin-left: 0;
+    width: 100%;
+  }
+}
